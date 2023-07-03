@@ -1,13 +1,19 @@
+import { SimpleGrid } from "@chakra-ui/react";
 import useAnime from "../hooks/useAnime";
+import AnimeCard from "./AnimeCard";
 
 const AnimeGrid = () => {
   const { animeList, error } = useAnime();
   return (
-    <ul>
+    <SimpleGrid
+      columns={{ sm: 2, md: 4, lg: 5, xl: 7 }}
+      padding="30px"
+      spacing={10}
+    >
       {animeList.map((anime) => (
-        <li key={anime.mal_id}>{anime.title}</li>
+        <AnimeCard key={anime.mal_id} anime={anime} />
       ))}
-    </ul>
+    </SimpleGrid>
   );
 };
 
