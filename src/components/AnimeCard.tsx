@@ -1,6 +1,5 @@
-import React from "react";
 import { Anime } from "../hooks/useAnime";
-import { Card, Image, CardBody, Heading } from "@chakra-ui/react";
+import { Card, Image, CardBody, Heading, Box } from "@chakra-ui/react";
 import Rating from "./Rating";
 
 interface Props {
@@ -9,10 +8,12 @@ interface Props {
 
 const AnimeCard = ({ anime }: Props) => {
   return (
-    <Card height="450px" width="250px" borderRadius={10} overflow="hidden">
-      <Image src={anime.images.jpg.image_url} />
+    <Card height="inherit">
+      <Image src={anime.images.jpg.image_url} display={"flex"} />
       <CardBody>
-        <Heading fontSize="xl">{anime.title}</Heading>
+        <Heading padding={5} textAlign="center" fontSize="xl">
+          {anime.title}
+        </Heading>
         <Rating rating={anime.rating} />
       </CardBody>
     </Card>
