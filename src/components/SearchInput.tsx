@@ -1,10 +1,9 @@
 import { SearchIcon } from "@chakra-ui/icons";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
-import React from "react";
 
 const SearchInput = () => {
   return (
-    <div>
+    <div className="search">
       <InputGroup>
         <InputLeftElement children={<SearchIcon />} />
         <Input
