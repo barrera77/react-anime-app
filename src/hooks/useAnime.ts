@@ -10,6 +10,7 @@ export interface Anime {
       image_url: string;
     };
   };
+  rating: string;
 }
 
 interface FetchResponse {
