@@ -8,10 +8,16 @@ interface Props {
 
 const AnimeCard = ({ anime }: Props) => {
   return (
-    <Card height="inherit">
-      <Image src={anime.images.jpg.image_url} display={"flex"} />
-      <CardBody>
-        <Heading padding={5} textAlign="center" fontSize="xl">
+    <Card width="inherit" height="inherit">
+      <Box className="item-top">
+        <Image
+          objectFit="cover"
+          className="poster"
+          src={anime.images.jpg.image_url}
+        />
+      </Box>
+      <CardBody className="item-bottom" display="table-column" paddingTop="1">
+        <Heading textAlign="center" fontSize="sm">
           {anime.title}
         </Heading>
         <Rating rating={anime.rating} />

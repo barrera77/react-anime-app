@@ -1,4 +1,4 @@
-import { Badge } from "@chakra-ui/react";
+import { Badge, Text } from "@chakra-ui/react";
 
 interface Props {
   rating: string;
@@ -8,14 +8,14 @@ const Rating = ({ rating }: Props) => {
   let color = rating === "R - 17+ (violence & profanity)" ? "red" : "";
 
   return (
-    <Badge
+    <Text
       backgroundColor="transparent"
-      colorScheme={color}
+      color={color}
       fontSize="10px"
-      paddingY={5}
+      paddingY={1}
     >
       {rating}
-    </Badge>
+    </Text>
   );
 };
 

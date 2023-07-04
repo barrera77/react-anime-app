@@ -7,7 +7,15 @@ interface Props {
 
 const AnimeCardContainer = ({ children }: Props) => {
   return (
-    <Box height="500px" width="285px" borderRadius={10} overflow="hidden">
+    <Box
+      width="180px"
+      height="310"
+      className="responsive"
+      borderRadius={10}
+      overflow="hidden"
+      flexDirection="column"
+      display="flex"
+    >
       {children}
     </Box>
   );
