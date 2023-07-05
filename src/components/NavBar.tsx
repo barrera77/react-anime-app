@@ -18,7 +18,7 @@ const NavBar = () => {
           Anime Rocks!
         </Text>
       </Box>
-      <SearchInput />
+
       <Box>
         <ColorModeSwitch />
       </Box>

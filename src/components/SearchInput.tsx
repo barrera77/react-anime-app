@@ -8,8 +8,8 @@ const SearchInput = () => {
         <InputLeftElement children={<SearchIcon />} />
         <Input
           borderRadius={20}
-          placeholder="Search Anime..."
           variant="filled"
+          placeholder="Search Anime..."
         />
       </InputGroup>{" "}
     </div>
