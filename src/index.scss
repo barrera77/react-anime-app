@@ -1,5 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
+@media (max-width: 1399.98px) {
+  body {
+    position: absolute;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1370px;
+}
+
+.tab {
+  padding-right: 10px;
+}
+
 .search {
   width: 60%;
 }
@@ -15,6 +36,9 @@
 .poster {
   width: 100%;
   height: 100%;
+}
+
+.slider {
 }
 
 /*
@@ -62,11 +86,11 @@ img {
 /** SLIDESHOW **/
 .slideshow,
 .slideshow:after {
-  height: 200px;
+  height: 350px;
   max-width: 1370px;
   margin: auto;
   position: relative;
-  width: 70%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -93,23 +117,27 @@ img {
 }
 
 .slideshow div:nth-child(1) span {
-  background-image: url(./assets/images/slide1.webp);
+  background-image: url(https://img.bunnyccdn.co/_r/1366x768/100/56/cc/56cca40be898cbecc462ea9987870942/56cca40be898cbecc462ea9987870942.jpg);
 }
 .slideshow div:nth-child(2) span {
   background-image: url(./assets/images/slide3.png);
   animation-delay: 6s;
 }
 .slideshow div:nth-child(3) span {
-  background-image: url(./assets/images/slide3.png);
+  background-image: url(https://static.bunnycdn.ru/i/cache/images/5/58/5806a16f2892768b4930c39ebf6ce756.jpg);
   animation-delay: 12s;
 }
 .slideshow div:nth-child(4) span {
-  background-image: url(./assets/images/slide4.jpeg);
+  background-image: url(https://img.bunnyccdn.co/_r/1366x768/100/ff/b6/ffb6981af9cacd38b190c2d878a4405a/ffb6981af9cacd38b190c2d878a4405a.jpg);
   animation-delay: 18s;
 }
 .slideshow div:nth-child(5) span {
   background-image: url(./assets/images/slide5.jpeg);
   animation-delay: 24s;
+}
+.slideshow div:nth-child(6) span {
+  background-image: url(https://img.bunnyccdn.co/_r/1366x768/100/76/9a/769aa036cdb4a575b43b44ef2ad625bf/769aa036cdb4a575b43b44ef2ad625bf.jpg);
+  animation-delay: 30s;
 }
 
 @keyframes imageAnimation {
@@ -150,6 +178,6 @@ img {
   }
 }
 
-.no-cssanimations .cb-slideshow li span {
+.no-cssanimations .cb-slideshow div span {
   opacity: 1;
 }

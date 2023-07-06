@@ -9,11 +9,7 @@ const AnimeGrid = () => {
   const skeletons = [2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
-    <SimpleGrid
-      columns={{ sm: 2, md: 3, lg: 5, xl: 7 }}
-      padding="30px"
-      spacing={5}
-    >
+    <SimpleGrid columns={{ sm: 2, md: 3, lg: 5, xl: 7 }} spacing={5}>
       {isLoading &&
         skeletons.map((skeleton) => (
           <AnimeCardContainer>

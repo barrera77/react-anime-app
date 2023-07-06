@@ -1,6 +1,6 @@
 import SearchInput from "./SearchInput";
 import ColorModeSwitch from "./ColorModeSwitch";
-import { Box, HStack, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Image, Link, Text } from "@chakra-ui/react";
 import logo3 from "../assets/logo3.jpg";
 
 const NavBar = () => {
@@ -18,10 +18,19 @@ const NavBar = () => {
           Anime Rocks!
         </Text>
       </Box>
+      <Flex>
+        <SearchInput />
+      </Flex>
 
-      <Box>
+      <Flex gap="9">
+        <Flex gap="8" fontWeight="bold" fontSize="xl">
+          <Box>Genre</Box>
+          <Box>Updated</Box>
+          <Box>Popular</Box>
+          <Box>Other</Box>
+        </Flex>
         <ColorModeSwitch />
-      </Box>
+      </Flex>
     </HStack>
   );
 };

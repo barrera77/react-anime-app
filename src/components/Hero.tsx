@@ -17,6 +17,9 @@ const Hero = () => {
         <div>
           <span></span>
         </div>
+        <div>
+          <span></span>
+        </div>
       </div>
     </>
   );
