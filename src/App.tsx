@@ -12,6 +12,7 @@ import NavBar from "./components/NavBar";
 import Popular from "./components/Popular";
 import Hero from "./components/Hero";
 import SearchInput from "./components/SearchInput";
+import GenreList from "./components/GenreList";
 
 function App() {
   return (
@@ -39,6 +40,11 @@ function App() {
           <NavBar />
         </Box>
       </GridItem>
+      <Show above="lg">
+        <GridItem area={"aside"}>
+          <GenreList />
+        </GridItem>
+      </Show>
 
       <GridItem area="main" position="relative">
         <Box className="container">
