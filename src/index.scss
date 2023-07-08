@@ -42,27 +42,45 @@
 .dropdown {
   position: relative;
 }
+::after,
+::before {
+  box-sizing: border-box;
+}
 .dropdown-content {
   position: absolute;
   width: max-content;
   height: fit-content;
   z-index: 10;
   column-count: 3;
-  column-gap: 10px;
+  column-gap: 5px;
   font-size: medium;
-  column-width: 100px;
-  list-style: none;
+  column-width: 150px;
   display: none;
+  padding: 0.7rem;
+}
+.dropdown-content ul {
+  padding: 2px;
 }
 
 .dropdown-content li {
+  padding: 0.4rem 0.7rem;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 0.2rem;
+  background: 0 0;
+  font-size: 0.95rem;
+}
+
+.dropdown-content ul li {
   text-decoration: none;
-  padding: 5px;
-  column-span: 1;
+  list-style: none;
+  width: 100%;
 }
 
 .dropdown-content li:hover {
-  background-color: rgba(0, 204, 255, 0.086);
+  background-color: #1a202c;
 }
 
 .dropdown:hover .dropdown-content {

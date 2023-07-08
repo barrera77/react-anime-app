@@ -6,9 +6,11 @@ const GenreList = () => {
   return (
     <>
       <Box className="dropdown-content" backgroundColor="Window">
-        {data.map((genre) => (
-          <li key={genre.mal_id}>{genre.name}</li>
-        ))}
+        <ul>
+          {data.map((genre) => (
+            <li key={genre.mal_id}>{genre.name}</li>
+          ))}
+        </ul>
       </Box>
     </>
   );
