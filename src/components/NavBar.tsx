@@ -1,11 +1,20 @@
 import SearchInput from "./SearchInput";
 import ColorModeSwitch from "./ColorModeSwitch";
-import { Box, Flex, HStack, Image, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Image,
+  Button,
+  Text,
+  theme,
+} from "@chakra-ui/react";
 import logo3 from "../assets/logo3.jpg";
+import GenreList from "./GenreList";
 
 const NavBar = () => {
   return (
-    <HStack padding="10px" paddingX={"30px"} justifyContent={"space-between"}>
+    <HStack paddingTop="10px" justifyContent={"space-between"}>
       <Box display="inline-flex" alignItems="center">
         <Image
           src={logo3}
@@ -23,8 +32,14 @@ const NavBar = () => {
       </Flex>
 
       <Flex gap="9">
-        <Flex gap="8" fontWeight="bold" fontSize="xl">
-          <Box>Genre</Box>
+        <Flex gap="8" fontSize="xl">
+          <Box className="dropdown">
+            <Button className="dropbtn" backgroundColor="transparent">
+              Genre
+            </Button>
+            <GenreList />
+          </Box>
+
           <Box>Updated</Box>
           <Box>Popular</Box>
           <Box>Other</Box>

@@ -5,6 +5,6 @@ export interface Genre {
   name: string;
 }
 
-const useGenres = () => useData<Genre>("/genres/anime");
+const useGenres = () => useData<Genre>("/genres/anime?filter=genres");
 
 export default useGenres;

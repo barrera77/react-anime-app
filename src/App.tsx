@@ -40,11 +40,6 @@ function App() {
           <NavBar />
         </Box>
       </GridItem>
-      <Show above="lg">
-        <GridItem area={"aside"}>
-          <GenreList />
-        </GridItem>
-      </Show>
 
       <GridItem area="main" position="relative">
         <Box className="container">
