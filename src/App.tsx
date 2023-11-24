@@ -1,20 +1,12 @@
-import {
-  Box,
-  Text,
-  Flex,
-  Grid,
-  GridItem,
-  HStack,
-  Show,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
 import AnimeGrid from "./components/AnimeGrid";
-import NavBar from "./components/NavBar";
-import Popular from "./components/Popular";
 import Hero from "./components/Hero";
-import SearchInput from "./components/SearchInput";
-import GenreList from "./components/GenreList";
+import NavBar from "./components/NavBar";
+import { useState } from "react";
+import { Genre } from "./hooks/UseGenres";
 
 function App() {
+  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
   return (
     <Grid
       templateAreas={{
@@ -73,7 +65,7 @@ function App() {
               <Box className="section-paging">3</Box>
             </Flex>
             <Box className="tab-content">
-              <AnimeGrid />
+              <AnimeGrid selectedGenre={selectedGenre} />
             </Box>
           </Box>
         </Box>

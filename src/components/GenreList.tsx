@@ -1,14 +1,24 @@
-import { Box } from "@chakra-ui/react";
-import useGenres from "../hooks/UseGenres";
+import { Box, Button } from "@chakra-ui/react";
+import useGenres, { Genre } from "../hooks/UseGenres";
 
-const GenreList = () => {
+interface Props {
+  onSelectedGenre: (genre: Genre) => void;
+}
+
+const GenreList = ({ onSelectedGenre }: Props) => {
   const { data } = useGenres();
   return (
     <>
       <Box className="dropdown-content" backgroundColor="Window">
         <ul>
           {data.map((genre) => (
-            <li key={genre.mal_id}>{genre.name}</li>
+            <Button
+              onClick={() => onSelectedGenre(genre)}
+              variant="unstyled"
+              key={genre.mal_id}
+            >
+              {genre.name}
+            </Button>
           ))}
         </ul>
       </Box>

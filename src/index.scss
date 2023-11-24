@@ -62,7 +62,7 @@
   padding: 2px;
 }
 
-.dropdown-content li {
+.dropdown-content Button {
   padding: 0.4rem 0.7rem;
   display: block;
   overflow: hidden;
@@ -71,15 +71,16 @@
   border-radius: 0.2rem;
   background: 0 0;
   font-size: 0.95rem;
+  text-align: left;
 }
 
-.dropdown-content ul li {
+.dropdown-content ul Button {
   text-decoration: none;
   list-style: none;
   width: 100%;
 }
 
-.dropdown-content li:hover {
+.dropdown-content Button:hover {
   background-color: #1a202c;
 }
 

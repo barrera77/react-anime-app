@@ -1,18 +1,14 @@
 import SearchInput from "./SearchInput";
 import ColorModeSwitch from "./ColorModeSwitch";
-import {
-  Box,
-  Flex,
-  HStack,
-  Image,
-  Button,
-  Text,
-  theme,
-} from "@chakra-ui/react";
+import { Box, Flex, HStack, Image, Button, Text } from "@chakra-ui/react";
 import logo3 from "../assets/logo3.jpg";
 import GenreList from "./GenreList";
+import { useState } from "react";
+import { Genre } from "../hooks/UseGenres";
 
 const NavBar = () => {
+  const [selectedGenre, setSelectGenre] = useState<Genre | null>(null);
+
   return (
     <HStack paddingTop="10px" justifyContent={"space-between"}>
       <Box display="inline-flex" alignItems="center">
@@ -37,7 +33,7 @@ const NavBar = () => {
             <Button className="dropbtn" backgroundColor="transparent">
               Genre
             </Button>
-            <GenreList />
+            <GenreList onSelectedGenre={(genre) => setSelectGenre(genre)} />
           </Box>
 
           <Box>Updated</Box>

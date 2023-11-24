@@ -1,3 +1,4 @@
+import { Genre } from "./UseGenres";
 import useData from "./useData";
 
 export interface Anime {
@@ -11,6 +12,13 @@ export interface Anime {
   rating: string;
 }
 
-const useAnime = () => useData<Anime>("/top/anime?filter=bypopularity");
+const useAnime = (selectedGenre: Genre | null) =>
+  useData<Anime>(
+    "/top/anime?genre=14",
+    {
+      params: { genre: selectedGenre?.mal_id },
+    },
+    [selectedGenre?.mal_id]
+  );
 
 export default useAnime;
